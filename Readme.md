@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [peacefull bob](https://up.htmlacademy.ru/adaptive/8/user/68426).
-* Наставник: `Неизвестно`.
+* Наставник: `Денис Байдаров`.
 
 ---
 
