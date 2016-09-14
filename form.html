@@ -27,7 +27,7 @@
     <h3>Помогите нашим отелям стать лучше! Оставьте свой отзыв о них, а также о посещенных вами достопримечательностях!</h3>
   </div>
   <div class="mainpage-content">
-   <form class="comment">
+   <form class="comment" method="post">
     <div class="comment__overall-information">
       <h3>Представьтесь, пожалуйста:</h3>
       <input type="text" id="name1">
@@ -55,26 +55,26 @@
     </div>
     <div class="comment__attraction-information">
       <h3>Посещенные  достопримечательности:</h3>
-      <input type="checkbox" value="1" id="attraction-item1" name="attraction">
+      <input type="checkbox" value="1" id="attraction-item1" name="attraction1">
       <label for="attraction-item1">Мост Дьявола</label>
-      <input type="checkbox" value="2" id="attraction-item2" name="attraction">
+      <input type="checkbox" value="2" id="attraction-item2" name="attraction2">
       <label for="attraction-item2">Слайд-парк</label>
-      <input type="checkbox" value="3" id="attraction-item3" name="attraction">
+      <input type="checkbox" value="3" id="attraction-item3" name="attraction3">
       <label for="attraction-item3">Гора-Колокол</label>
-      <input type="checkbox" value="4" id="attraction-item4" name="attraction">
+      <input type="checkbox" value="4" id="attraction-item4" name="attraction4">
       <label for="attraction-item4">Красные скалы</label>
     </div>
     <div class="comment__descr-information">
      <h3>Опишите свои эмоции:</h3>
-      <input type="text">
+      <textarea></textarea>
     </div>
-    <button class="send-comment">Отправить отзыв</button>
+    <button type="submit" class="send-comment">Отправить отзыв</button>
     </form>
   </div>
   <footer class="footer">
-    <div class="footer__hashtag"></div>
+    <div class="footer__hashtag">#visitsedona</div>
     <div class="footer__social"></div>
-    <div class="footer__develop"></div>
+    <div class="footer__develop">Разработано</div>
   </footer>
 </body>
 
