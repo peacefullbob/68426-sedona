@@ -8,28 +8,28 @@
 
 <body>
   <header class="header">
-    <div class="header__logo">
-      <a href=""></a>
+    <div class="logo-block">
+      <a class="logo" href="#"></a>
     </div>
-    <button class="header__button-toggle"></button>
-    <nav class="header__nav">
-     <ul>
-      <li>Главная</li>
-      <li>Фото и видео</li>
-      <li>Форма отзыва</li>
-      <li>HTML Academy</li>
+    <button class="header__nav-toggle" type="button"></button>
+    <nav class="main-nav">
+    <ul class="main-nav__list">
+      <li class="main-nav__list-item"><a class="main-nav__link-item" href="#">Главная</a></li>
+      <li class="main-nav__list-item"><a class="main-nav__link-item" href="#">Фото и видео</a></li>
+      <li class="main-nav__list-item"><a class="main-nav__link-item" href="#">Форма отзыва</a></li>
+      <li class="main-nav__list-item"><a class="main-nav__link-item" href="#">HTML Academy</a></li>
       </ul>
     </nav>
     <div class="header__main-photo"></div>
   </header>
   <div class="main-information">
-    <h1>Оставьте свой отзыв</h1>
-    <h3>Помогите нашим отелям стать лучше! Оставьте свой отзыв о них, а также о посещенных вами достопримечательностях!</h3>
+    <h1 class="main-information__main-head">Оставьте свой отзыв</h1>
+    <h3 class="main-information__subtitle">Помогите нашим отелям стать лучше! Оставьте свой отзыв о них, а также о посещенных вами достопримечательностях!</h3>
   </div>
   <div class="mainpage-content">
-   <form class="comment" method="post">
-    <div class="comment__overall-information">
-      <h3>Представьтесь, пожалуйста:</h3>
+   <form class="form" method="post">
+    <div class="form-information">
+      <h3 class="form-information__form-head">Представьтесь, пожалуйста:</h3>
       <input type="text" id="name1">
       <label for="name1">Имя</label>
       <input type="text" id="name2">
@@ -37,15 +37,15 @@
       <input type="text" id="name3">
       <label for="name3">Отчество</label>
     </div>
-    <div class="comment__contact-information">
-      <h3>Контактная информация:</h3>
+    <div class="form-information">
+      <h3 class="form-information__form-head">Контактная информация:</h3>
       <input type="text" id="phone" placeholder="Введите ваш телефон">
       <label for="phone">Контактный телефон</label>
       <input type="text" id="mail" placeholder="Введите вашу почту">
       <label for="mail">Электронная почта</label>
     </div>
-    <div class="comment__comment-information">
-     <h3>Ваше общее впечатление:</h3>
+    <div class="form-information">
+     <h3 class="form-information__form-head">Ваше общее впечатление:</h3>
       <input type="radio" value="1" id="comment-item1" name="comment">
       <label for="comment-item1">Скорее положительное</label>
       <input type="radio" value="2" id="comment-item2" name="comment">
@@ -53,8 +53,8 @@
       <input type="radio" value="3" id="comment-item3" name="comment">
       <label for="comment-item2">Скорее положительное</label>
     </div>
-    <div class="comment__attraction-information">
-      <h3>Посещенные  достопримечательности:</h3>
+    <div class="form-information">
+      <h3 class="form-information__form-head">Посещенные  достопримечательности:</h3>
       <input type="checkbox" value="1" id="attraction-item1" name="attraction1">
       <label for="attraction-item1">Мост Дьявола</label>
       <input type="checkbox" value="2" id="attraction-item2" name="attraction2">
@@ -64,11 +64,11 @@
       <input type="checkbox" value="4" id="attraction-item4" name="attraction4">
       <label for="attraction-item4">Красные скалы</label>
     </div>
-    <div class="comment__descr-information">
-     <h3>Опишите свои эмоции:</h3>
+    <div class="form-information">
+     <h3 class="form-information__form-head">Опишите свои эмоции:</h3>
       <textarea></textarea>
     </div>
-    <button type="submit" class="send-comment">Отправить отзыв</button>
+    <button type="submit" class="send-form">Отправить отзыв</button>
     </form>
   </div>
   <footer class="footer">
