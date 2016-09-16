@@ -22,45 +22,45 @@
   </header>
   <div class="main-information">
     <h1 class="main-information__main-head">Оставьте свой отзыв</h1>
-    <h3 class="main-information__subtitle">Помогите нашим отелям стать лучше! Оставьте свой отзыв о них, а также о посещенных вами достопримечательностях!</h3>
+    <p class="main-information__subtitle">Помогите нашим отелям стать лучше! Оставьте свой отзыв о них, а также о посещенных вами достопримечательностях!</p>
   </div>
   <div class="mainpage-content">
     <form class="form" method="post">
       <div class="form-information">
         <h3 class="form-information__form-head">Представьтесь, пожалуйста:</h3>
-        <input type="text" id="name1">
-        <label for="name1">Имя</label>
-        <input type="text" id="name2">
-        <label for="name2">Фамилия</label>
-        <input type="text" id="name3">
-        <label for="name3">Отчество</label>
+        <input class="form-information__input-text" type="text" id="name1">
+        <label class="form-information__label-text" for="name1">Имя</label>
+        <input class="form-information__input-text" type="text" id="name2">
+        <label class="form-information__label-text" for="name2">Фамилия</label>
+        <input class="form-information__input-text" type="text" id="name3">
+        <label class="form-information__label-text" for="name3">Отчество</label>
       </div>
       <div class="form-information">
         <h3 class="form-information__form-head">Контактная информация:</h3>
-        <input type="text" id="phone" placeholder="Введите ваш телефон">
-        <label for="phone">Контактный телефон</label>
-        <input type="text" id="mail" placeholder="Введите вашу почту">
-        <label for="mail">Электронная почта</label>
+        <input class="form-information__input-text" type="text" id="phone" placeholder="Введите ваш телефон">
+        <label class="form-information__label-text" for="phone">Контактный телефон</label>
+        <input class="form-information__input-text" type="text" id="mail" placeholder="Введите вашу почту">
+        <label class="form-information__label-text" for="mail">Электронная почта</label>
       </div>
       <div class="form-information">
         <h3 class="form-information__form-head">Ваше общее впечатление:</h3>
-        <input type="radio" value="1" id="comment-item1" name="comment">
-        <label for="comment-item1">Скорее положительное</label>
-        <input type="radio" value="2" id="comment-item2" name="comment">
-        <label for="comment-item2">Скорее положительное</label>
-        <input type="radio" value="3" id="comment-item3" name="comment">
-        <label for="comment-item2">Скорее положительное</label>
+        <input class="form-information__radio" type="radio" value="1" id="comment-item1" name="comment">
+        <label class="form-information__label-radio"for="comment-item1">Скорее положительное</label>
+        <input class="form-information__radio" type="radio" value="2" id="comment-item2" name="comment">
+        <label class="form-information__label-radio"for="comment-item2">Скорее положительное</label>
+        <input class="form-information__radio" type="radio" value="3" id="comment-item3" name="comment">
+        <label class="form-information__label-radio"for="comment-item2">Скорее положительное</label>
       </div>
       <div class="form-information">
         <h3 class="form-information__form-head">Посещенные  достопримечательности:</h3>
-        <input type="checkbox" value="1" id="attraction-item1" name="attraction1">
-        <label for="attraction-item1">Мост Дьявола</label>
-        <input type="checkbox" value="2" id="attraction-item2" name="attraction2">
-        <label for="attraction-item2">Слайд-парк</label>
-        <input type="checkbox" value="3" id="attraction-item3" name="attraction3">
-        <label for="attraction-item3">Гора-Колокол</label>
-        <input type="checkbox" value="4" id="attraction-item4" name="attraction4">
-        <label for="attraction-item4">Красные скалы</label>
+        <input class="form-information__checkbox" type="checkbox" value="1" id="attraction-item1" name="attraction1">
+        <label class="form-information__label-checkbox" for="attraction-item1">Мост Дьявола</label>
+        <input class="form-information__checkbox" type="checkbox" value="2" id="attraction-item2" name="attraction2">
+        <label class="form-information__label-checkbox" for="attraction-item2">Слайд-парк</label>
+        <input class="form-information__checkbox" type="checkbox" value="3" id="attraction-item3" name="attraction3">
+        <label class="form-information__label-checkbox" for="attraction-item3">Гора-Колокол</label>
+        <input class="form-information__checkbox" type="checkbox" value="4" id="attraction-item4" name="attraction4">
+        <label class="form-information__label-checkbox" for="attraction-item4">Красные скалы</label>
       </div>
       <div class="form-information">
         <h3 class="form-information__form-head">Опишите свои эмоции:</h3>
@@ -71,8 +71,12 @@
   </div>
   <footer class="footer">
     <div class="footer__hashtag">#visitsedona</div>
-    <div class="footer__social"></div>
-    <div class="footer__develop">Разработано</div>
+    <div class="footer__social">
+      <a class="footer__twit" href="#"></a>
+      <a class="footer__fb" href="#"></a>
+      <a class="footer__yt" href="#"></a>
+    </div>
+    <div class="footer__develop">Разработано<a class="footer__htmlacademy-link" href="#"></a></div>
   </footer>
 </body>
 </html>
