@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
-  <title>Седона — небольшой городок в Аризоне</title>
+  <title>Главная</title>
+  
+  <link rel="stylesheet" href="css/normalize.css">
+  <link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
   <header class="header">
-    <div class="logo-block">
-      <a class="logo" href="#"></a>
-    </div>
-    <button class="header__nav-toggle" type="button"></button>
+    <a class="logo" href="#"></a>
+    <button class="main-nav__toggle main-nav__toggle--close" type="button"></button>
     <nav class="main-nav">
       <ul class="main-nav__list">
-        <li class="main-nav__list-item"><a class="main-nav__link-item" href="#">Главная</a></li>
-        <li class="main-nav__list-item"><a class="main-nav__link-item" href="#">Фото и видео</a></li>
-        <li class="main-nav__list-item"><a class="main-nav__link-item" href="#">Форма отзыва</a></li>
-        <li class="main-nav__list-item"><a class="main-nav__link-item" href="#">HTML Academy</a></li>
+      <li class="main-nav__list-item"><a class="main-nav__link-item" href=index.html>Главная</a></li>
+      <li class="main-nav__list-item"><a class="main-nav__link-item" href="photo.html">Фото и видео</a></li>
+      <li class="main-nav__list-item"><a class="main-nav__link-item" href="form.html">Форма отзыва</a></li>
+      <li class="main-nav__list-item"><a class="main-nav__link-item" href="https://htmlacademy.ru">HTML Academy</a></li>
       </ul>
     </nav>
     <div class="header__main-photo"></div>
@@ -26,46 +29,48 @@
       <p class="main-information__subtitle">Рассмотрим 5 причин, по которым седона круче, чем Гранд Каньон!</p>
     </div>
     <div class="features-block">
-      <div class="feature feature--blue">
+      <div class="feature feature--blue feature--white-text">
         <span class="feature__feature-number">№ 1</span>
-        <h1 class="feature__head">Настоящий городок</h1>
+        <h3 class="feature__head">Настоящий городок</h3>
         <p class="feature__subtitle"> Седона не аттракцион для туристов, там течет своя жизнь</p>
-        <div class="feature feature--icon">
-          <h1 class="feature__head">Жилье</h1>
-          <p class="feature__subtitle">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-        </div>
-        <div class="feature feature--icon">
-          <h1 class="feature__head">Сувениры</h1>
-          <p class="feature__subtitle">Не только китайского, но и местного производства!</p>
-        </div>
-        <div class="feature feature--icon">
-          <h1 class="feature__head">Еда</h1>
-          <p class="feature__subtitle">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-        </div>
+        <img class="feature__img" src="img/photo-city@1x.jpg">
       </div>
-      <div class="feature">
+      <div class="feature feature--icon">
+        <h3 class="feature__head">Жилье</h3>
+        <p class="feature__subtitle">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+      </div>
+      <div class="feature feature--icon">
+        <h3 class="feature__head">Сувениры</h3>
+        <p class="feature__subtitle">Не только китайского, но и местного производства!</p>
+      </div>
+      <div class="feature feature--icon">
+        <h3 class="feature__head">Еда</h3>
+        <p class="feature__subtitle">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+      </div>
+      <div class="feature feature--blue feature--white-text">
         <span class="feature__feature-number">№ 2</span>
-        <h1 class="feature__head">Там есть Мост дьявола</h1>
-        <p class="feature__subtitle"> Да, по нему можно пройти! Если конечно вы осмелитесь!</p>
+        <h3 class="feature__head">Там есть Мост дьявола</h3>
+        <p class="feature__subtitle feature__subtitle--white"> Да, по нему можно пройти! Если конечно вы осмелитесь!</p>
+        <img class="feature__img" src="img/photo-bridge@1x.jpg">
       </div>
-      <div class="feature">
+      <div class="feature feature--grey">
         <span class="ffeature__feature-number">№ 3</span>
-        <h1 class="feature__head">Небольшая площадь </h1>
+        <h3 class="feature__head">Небольшая площадь </h3>
         <p class="feature__subtitle">Все достопримечательности находятся очень близко</p>
       </div>
-      <div class="feature">
+      <div class="feature feature--grey">
         <span class="feature__feature-number">№ 4</span>
-        <h1 class="feature__head">Красивая дорога</h1>
+        <h3 class="feature__head">Красивая дорога</h3>
         <p class="feature__subtitle">Езхать в Седону из Лас-Вегаса совсем не скучно</p>
       </div>
-      <div class="feature">
+      <div class="feature feature--grey">
         <span class="feature__feature-number">№ 5</span>
-        <h1 class="feature__head">Мало туристов</h1>
+        <h3 class="feature__head">Мало туристов</h3>
         <p class="feature__subtitle">Большинство едет в Гранд Каньон и толпится там</p>
       </div>
     </div>
     <div class="call-toaction">
-      <h1 class="call-toaction__head">Заинтересовались?</h1>
+      <h3 class="call-toaction__head">Заинтересовались?</h3>
       <p class="call-toaction__subtitle">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне </p>
       <button type="button" class="btn">Найти гостиницу</button>
     </div>
@@ -78,7 +83,9 @@
       <a class="footer__fb" href="#"></a>
       <a class="footer__yt" href="#"></a>
     </div>
-    <div class="footer__develop">Разработано<a class="footer__htmlacademy-link" href="#"></a></div>
+    <div class="footer__develop">Разработано
+      <a class="footer__htmlacademy-link" href="#"></a>
+    </div>
   </footer>
 </body>
 </html>
