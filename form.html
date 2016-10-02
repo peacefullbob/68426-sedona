@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
-  <title>Отзыв</title>
-  
-  <link rel="stylesheet" href="css/normalize.css">
+  <title>Отзывы</title>
+
   <link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
   <header class="header">
+   <div class="main-nav__wrapper">
+      <button class="main-nav__toggle main-nav__toggle--close" type="button"></button>
       <a class="logo" href="#"></a>
-    <button class="main-nav__toggle main-nav__toggle--close" type="button"></button>
-    <nav class="main-nav">
-      <ul class="main-nav__list">
-      <li class="main-nav__list-item"><a class="main-nav__link-item" href=index.html>Главная</a></li>
-      <li class="main-nav__list-item"><a class="main-nav__link-item" href="photo.html">Фото и видео</a></li>
-      <li class="main-nav__list-item"><a class="main-nav__link-item" href="form.html">Форма отзыва</a></li>
-      <li class="main-nav__list-item"><a class="main-nav__link-item" href="https://htmlacademy.ru">HTML Academy</a></li>
-      </ul>
-    </nav>
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__list-item"><a class="main-nav__link-item" href=index.html>Главная</a></li>
+          <li class="main-nav__list-item"><a class="main-nav__link-item" href="photo.html">Фото и видео</a></li>
+          <li class="main-nav__list-item"><a class="main-nav__link-item" href="form.html">Форма отзыва</a></li>
+          <li class="main-nav__list-item"><a class="main-nav__link-item" href="https://htmlacademy.ru">HTML Academy</a></li>
+        </ul>
+      </nav>
+    </div>
     <div class="header__main-photo"></div>
   </header>
-  <div class="main-information">
-    <h3 class="main-information__main-head">Оставьте свой отзыв</h3>
-    <p class="main-information__subtitle">Помогите нашим отелям стать лучше! Оставьте свой отзыв о них, а также о посещенных вами достопримечательностях!</p>
+  <div class="content-wrapper">
+  <div class="text-block">
+    <h3 class="text-block__main-head">Оставьте свой отзыв</h3>
+    <p class="text-block__subtitle">Помогите нашим отелям стать лучше! Оставьте свой отзыв о них, а также о посещенных вами достопримечательностях!</p>
   </div>
   <div class="mainpage-content">
     <form class="form" method="post">
@@ -36,6 +40,7 @@
         <input class="form-information__input-text" type="text" id="name3">
         <label class="form-information__label-text" for="name3">Отчество</label>
       </div>
+      <div class="clearfix"></div>
       <div class="form-information">
         <p class="form-information__form-head">Контактная информация:</p>
         <input class="form-information__input-text" type="text" id="phone" placeholder="Введите ваш телефон">
@@ -70,14 +75,17 @@
       <button type="submit" class="form-information__send-form">Отправить отзыв</button>
     </form>
   </div>
+  </div>
   <footer class="footer">
-    <div class="footer__hashtag">#visitsedona</div>
-    <div class="footer__social">
-      <a class="footer__twit" href="#"></a>
-      <a class="footer__fb" href="#"></a>
-      <a class="footer__yt" href="#"></a>
+    <div class="footer__element">#visitsedona</div>
+    <div class="footer__element">
+      <a class="footer__social-icon footer__social-icon--tw" href="#"></a>
+      <a class="footer__social-icon footer__social-icon--fb" href="#"></a>
+      <a class="footer__social-icon footer__social-icon--yt" href="#"></a>
     </div>
-    <div class="footer__develop">Разработано<a class="footer__htmlacademy-link" href="#"></a></div>
+    <div class="footer__element">Разработано
+      <a class="footer__htmlacademy-link" href="#"></a>
+    </div>
   </footer>
 </body>
 </html>

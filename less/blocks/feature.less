@@ -1,14 +1,14 @@
 .feature {
   outline: 2px solid green;
-  
+
   &--blue {
     background-color: #81b3d2;
   }
-  
+
   &--grey {
     background-color: #eeeeee;
   }
-  
+
   &--white-text {
     color: #fff;
   }
@@ -18,4 +18,34 @@
 }
 .feature__img {
   display: block;
+}
+@media @tablet-widths {
+  .feature {
+    &--icon, &--grey {
+      display: inline-block;
+      width: 32.5%;
+      vertical-align: top;
+    }
+    &--blue {
+      display: inline-block;
+      width: 29%;
+      vertical-align: top;
+      height: 220px;
+    }
+  }
+  .feature__img-block {
+      display: inline-block;
+      width: 70%;
+    vertical-align: top;
+  }
+}
+@media @desktop-widths {
+    .feature {
+    &--icon, &--grey {
+      width: 32.8%;
+    }
+      &--blue {
+      height: 330px;
+    }
+  }
 }
