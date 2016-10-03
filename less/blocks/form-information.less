@@ -1,21 +1,33 @@
-.form {
-  position: relative;
-}
 .form-information {
   outline: 2px solid green;
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-information__label-text {
+  width: 49%;
+}
+.form-information__input-text {
+  width: 49%;
+}
+.form-information__radio {
+  width: 49%;
+}
+.form-information__label-radio {
+  width: 49%;
+}
+.form-information__checkbox {
+  width: 49%;
+}
+.form-information__label-checkbox {
+  width: 49%;
 }
 @media @tablet-widths {
     .form-information:first-child {
     width: 50%;
-    margin-left: 50%;
-    float: right
   }
     .form-information:nth-child(4) {
-    position: absolute;
-    top: 10px;
+    order: -1;
     width: 48%;
-    height: 28.4%;
-    float: left;
   }
 }
 @media @desktop-widths {

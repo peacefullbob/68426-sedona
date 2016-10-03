@@ -11,8 +11,9 @@
 <body>
   <header class="header">
    <div class="main-nav__wrapper">
-      <button class="main-nav__toggle main-nav__toggle--close" type="button"></button>
-      <a class="logo" href="#"></a>
+      <button class="main-nav__toggle" type="button"></button>
+      <button class="main-nav__toggle-close" type="button"></button>
+      <a class="logo" href="/"></a>
       <nav class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__list-item"><a class="main-nav__link-item" href=index.html>Главная</a></li>
@@ -22,7 +23,7 @@
         </ul>
       </nav>
     </div>
-    <div class="header__main-photo"></div>
+    <div class="header__main-photo"><h1 class="header__main-head">Sedona</h1></div>
   </header>
   <div class="content-wrapper">
   <div class="text-block">
@@ -32,24 +33,22 @@
   <div class="mainpage-content">
     <form class="form" method="post">
       <div class="form-information">
-        <p class="form-information__form-head">Представьтесь, пожалуйста:</p>
-        <input class="form-information__input-text" type="text" id="name1">
-        <label class="form-information__label-text" for="name1">Имя</label>
-        <input class="form-information__input-text" type="text" id="name2">
-        <label class="form-information__label-text" for="name2">Фамилия</label>
-        <input class="form-information__input-text" type="text" id="name3">
-        <label class="form-information__label-text" for="name3">Отчество</label>
+        <h3 class="text-block__main-head">Представьтесь, пожалуйста:</h3>
+        <label class="form-information__label-text" for="name1">Имя</label><input class="form-information__input-text" type="text" id="name1">
+
+        <label class="form-information__label-text" for="name2">Фамилия</label><input class="form-information__input-text" type="text" id="name2">
+
+        <label class="form-information__label-text" for="name3">Отчество</label><input class="form-information__input-text" type="text" id="name3">
       </div>
       <div class="clearfix"></div>
       <div class="form-information">
-        <p class="form-information__form-head">Контактная информация:</p>
-        <input class="form-information__input-text" type="text" id="phone" placeholder="Введите ваш телефон">
-        <label class="form-information__label-text" for="phone">Контактный телефон</label>
-        <input class="form-information__input-text" type="text" id="mail" placeholder="Введите вашу почту">
+        <h3 class="text-block__main-head">Контактная информация:</h3>
+        <label class="form-information__label-text" for="phone">Контактный телефон</label><input class="form-information__input-text" type="text" id="phone" placeholder="Введите ваш телефон">
         <label class="form-information__label-text" for="mail">Электронная почта</label>
+        <input class="form-information__input-text" type="text" id="mail" placeholder="Введите вашу почту">
       </div>
       <div class="form-information">
-        <p class="form-information__form-head">Ваше общее впечатление:</p>
+        <h3 class="text-block__main-head">Ваше общее впечатление:</h3>
         <input class="form-information__radio" type="radio" value="1" id="comment-item1" name="comment">
         <label class="form-information__label-radio"for="comment-item1">Скорее положительное</label>
         <input class="form-information__radio" type="radio" value="2" id="comment-item2" name="comment">
@@ -58,7 +57,7 @@
         <label class="form-information__label-radio"for="comment-item2">Скорее положительное</label>
       </div>
       <div class="form-information">
-        <p class="form-information__form-head">Посещенные  достопримечательности:</p>
+        <h3 class="text-block__main-head">Посещенные  достопримечательности:</h3>
         <input class="form-information__checkbox" type="checkbox" value="1" id="attraction-item1" name="attraction1">
         <label class="form-information__label-checkbox" for="attraction-item1">Мост Дьявола</label>
         <input class="form-information__checkbox" type="checkbox" value="2" id="attraction-item2" name="attraction2">
@@ -69,7 +68,7 @@
         <label class="form-information__label-checkbox" for="attraction-item4">Красные скалы</label>
       </div>
       <div class="form-information">
-        <h3 class="form-information__form-head">Опишите свои эмоции:</h3>
+        <h3 class="text-block__main-head">Опишите свои эмоции:</h3>
         <textarea></textarea>
       </div>
       <button type="submit" class="form-information__send-form">Отправить отзыв</button>
