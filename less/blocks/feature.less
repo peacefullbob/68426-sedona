@@ -1,5 +1,6 @@
 .feature {
   outline: 2px solid green;
+  text-align: center;
 
   &--blue {
     background-color: #81b3d2;
@@ -22,21 +23,11 @@
 @media @tablet-widths {
   .feature {
     &--icon, &--grey {
-      display: inline-block;
       width: 32.5%;
-      vertical-align: top;
     }
     &--blue {
-      display: inline-block;
-      width: 29%;
-      vertical-align: top;
-      height: 220px;
+      width: 33.3%;
     }
-  }
-  .feature__img-block {
-      display: inline-block;
-      width: 70%;
-    vertical-align: top;
   }
 }
 @media @desktop-widths {
@@ -45,7 +36,6 @@
       width: 32.8%;
     }
       &--blue {
-      height: 330px;
     }
   }
 }

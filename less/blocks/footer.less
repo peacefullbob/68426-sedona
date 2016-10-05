@@ -1,12 +1,14 @@
 .footer {
-  .container();
   outline: 2px solid pink;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .footer__element {
   .last-element();
   outline: 2px solid red;
   height: 50px;
-  margin: 10px;
+  width: 12,5%
 }
 .footer__social-icon {
   display: inline-block;
@@ -28,13 +30,8 @@
    background-color: #ababab;
 }
 @media @tablet-widths {
-  .footer__element {
-  display: inline-block;
-  margin-right: 134px;
-  }
-}
-@media @desktop-widths {
-  .footer__element {
-  margin-right: 293px;
+  .footer {
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
 }
