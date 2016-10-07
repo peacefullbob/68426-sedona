@@ -2,7 +2,7 @@
   outline: 2px solid green;
   display: flex;
   flex-wrap: wrap;
-  width: 80%;
+  width: 100%;
 }
 .form-information__label-text {
   width: 49%;
@@ -27,15 +27,29 @@
 }
 @media @tablet-widths {
     .form-information:first-child {
-    width: 40%;
+    width: 50%;
   }
     .form-information:nth-child(4) {
     order: -1;
-    width: 40%;
+    width: 50%;
+  }
+    .form-information__label-checkbox {
+      width: 33%;
   }
 }
 @media @desktop-widths {
+  .form-information {
+    justify-content: space-around;
+  }
   .form-information:nth-child(4) {
     height: auto;
+  }
+  .form-information:nth-child(3) {
+    .form-information__label-text {
+      width: initial;
+    }
+    .form-information__input-text {
+      width: initial;
+    }
   }
 }
