@@ -1,10 +1,21 @@
 .img-block {
-  outline: 2px solid green;
-  margin: 10px;
+  position: relative;
+}
+.img-block__photo-descr {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background: #333;
+  opacity: 0.6;
+  color: #fff;
+}
+.img-block__img-container {
+   width: 100%;
+   background-color: #ababab;
 }
 @media @tablet-widths {
   .img-block:first-child {
-    width: 98%;
+    width: 100%;
   }
   .img-block:nth-child(n+2) {
     display: inline-block;
@@ -13,6 +24,6 @@
 }
 @media @desktop-widths {
    .img-block:nth-child(n+2) {
-     width: 30.9%;
+     width: 33.3333%;
   }
 }

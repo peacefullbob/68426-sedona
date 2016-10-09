@@ -1,6 +1,11 @@
 .feature {
-  outline: 2px solid green;
-
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  
   &--blue {
     background-color: #81b3d2;
   }
@@ -13,39 +18,51 @@
     color: #fff;
   }
 }
+.feature__img {
+  width: 100%%;
+}
 .feature__subtitle {
   text-transform: uppercase;
 }
-.feature__img {
-  display: block;
+.feature__text-block {
+  width: 95.5%;
+  padding: 4.5%;
 }
 @media @tablet-widths {
   .feature {
     &--icon, &--grey {
-      display: inline-block;
-      width: 32.5%;
-      vertical-align: top;
+      width: 24.333%;
+      padding: 4.5%;
     }
     &--blue {
-      display: inline-block;
-      width: 29%;
-      vertical-align: top;
-      height: 220px;
+      width: 33.3%;
     }
   }
-  .feature__img-block {
-      display: inline-block;
-      width: 70%;
-    vertical-align: top;
+  .feature__img {
+    width: 67%;
+  }
+  .feature__text-block {
+    width: 24%;
+    padding: 4.5%;
+  }
+  .feature:first-child {
+  width: 100%;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  }
+  .feature:nth-child(5) {
+    width: 100%;
+    flex-wrap: nowrap;
+    flex-direction: row;
   }
 }
 @media @desktop-widths {
     .feature {
     &--icon, &--grey {
-      width: 32.8%;
+      width: 24.33%;
+      padding: 4.5%;
     }
       &--blue {
-      height: 330px;
     }
   }
 }
