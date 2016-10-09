@@ -1,17 +1,26 @@
 .text-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 29%;
-}
-.text-block__main-head {
+  width: 280px;
+  padding: 10px;
+  margin: 0 auto;
   text-align: center;
-  width: 100%;
-}
-.text-block__subtitle {
   text-transform: uppercase;
-  text-align: center;
 }
 .text-block__textarea {
   width: 100%;
+}
+.text-block__main-head {
+	width: 100%;
+	text-align: center;
+}
+
+@media @tablet-widths {
+  .text-block {
+    width: 460px;
+  }
+	.text-block__main-head {
+		font-size: 21px;
+		&--biggest-font-size {
+			font-size: 30px;
+		}
+	}
 }

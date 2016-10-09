@@ -1,4 +1,19 @@
 .gallery {
-  outline: 2px solid orange;
-  padding: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media @tablet-widths {
+	.gallery {
+	flex-direction: row;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 60px;
+  }
+}
+@media @tablet-widths {
+	.gallery {
+	padding: 0;
+  }
 }
