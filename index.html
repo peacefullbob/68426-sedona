@@ -15,63 +15,90 @@
    <div class="main-nav__wrapper">
       <button class="main-nav__toggle main-nav__toggle--close" type="button"></button>
       <button class="main-nav__toggle-close" type="button"></button>
-      <a class="logo" href="/"><img src="img/logo-sedona-mobile.svg"></a>
+      <a class="logo" href="/">
+       <picture>
+        <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+        <img src="img/logo-sedona-mobile.svg" alt="Седона - небольшой городок в Аризоне">
+      </picture>
+	   </a>
       <nav class="main-nav">
         <ul class="main-nav__list">
-          <li class="main-nav__list-item"><a class="main-nav__link-item" href=index.html>Главная</a></li>
+          <li class="main-nav__list-item"><a class="main-nav__link-item main-nav__link-item--active" href=index.html>Главная</a></li>
           <li class="main-nav__list-item"><a class="main-nav__link-item" href="photo.html">Фото и видео</a></li>
           <li class="main-nav__list-item"><a class="main-nav__link-item" href="form.html">Форма отзыва</a></li>
           <li class="main-nav__list-item"><a class="main-nav__link-item" href="https://htmlacademy.ru">HTML Academy</a></li>
         </ul>
       </nav>
     </div>
-    <div class="header__main-photo"><h1 class="header__main-head">Sedona</h1></div>
+    <div class="header__main-photo"><img class="header__main-photo-logo" src="img/text-sedona-index.svg"></div>
   </header>
     <div class="text-block">
       <h3 class="text-block__main-head">Седона — небольшой  городок в Аризоне,  заслуживающий большего!</h3>
       <p class="text-block__subtitle">Рассмотрим 5 причин, по которым седона круче, чем Гранд Каньон!</p>
     </div>
     <div class="features-block">
-      <div class="feature feature--blue feature--white-text">
-        <div class="feature__text-block">
-        <span class="feature__feature-number">№ 1</span>
+      <div class="feature">
+        <div class="feature__text-block feature__text-block--blue-background">
+        <span class="feature__feature-number">– №1 –</span>
         <h3 class="feature__head">Настоящий городок</h3>
           <p class="feature__subtitle"> Седона не аттракцион для туристов, там течет своя жизнь</p>
         </div>
-        <img class="feature__img" src="img/photo-city@1x.jpg">
+      <div class="feature__img-container">
+		  <picture>
+			<source media="(min-width: 1200px)" srcset="img/photo-city@1x.jpg 1x, img/photo-city@1x.jpg 2x">
+			<source media="(min-width: 768px)" srcset="img/photo-city-tablet@1x.jpg 1x, img/photo-city-tablet@2x.jpg 2x">
+			<img class="feature__img" src="img/photo-city-mobile@1x.jpg" srcset="img/photo-city-mobile@1x.jpg 1x, img/photo-city-mobile@2x.jpg 2x" alt="Седона - небольшой городок в Аризоне">
+		  </picture>
+	  </div>
       </div>
       <div class="feature feature--icon">
-        <h3 class="feature__head">Жилье</h3>
-        <p class="feature__subtitle">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+        <div class="feature__icon-container"><img src="img/icon-house.svg" alt="Еда"></div>
+         <div class="feature__text-block feature__text-block--icon">
+          <h3 class="feature__head">Жилье</h3>
+          <p class="feature__subtitle">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+        </div>
       </div>
       <div class="feature feature--icon">
-        <h3 class="feature__head">Сувениры</h3>
-        <p class="feature__subtitle">Не только китайского, но и местного производства!</p>
+         <div class="feature__icon-container"><img src="img/icon-gift.svg"></div>
+         <div class="feature__text-block feature__text-block--icon">
+          <h3 class="feature__head">Сувениры</h3>
+          <p class="feature__subtitle">Не только китайского, но и местного производства!</p>
+        </div>
       </div>
       <div class="feature feature--icon">
-        <h3 class="feature__head">Еда</h3>
-        <p class="feature__subtitle">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+      <div class="feature__icon-container"><img src="img/icon-burger.svg" alt="Еда"></div>
+       <div class="feature__text-block feature__text-block--icon">
+          <h3 class="feature__head">Еда</h3>
+          <p class="feature__subtitle">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+        </div>
       </div>
       <div class="feature feature--blue feature--white-text">
-       <img class="feature__img" src="img/photo-bridge@1x.jpg">
-       <div class="feature__text-block">
-        <span class="feature__feature-number">№ 2</span>
+      <div class="feature__img-container">
+		  <picture>
+			<source media="(min-width: 1200px)" srcset="img/photo-city@1x.jpg 1x, img/photo-city@1x.jpg 2x">
+			<source media="(min-width: 768px)" srcset="img/photo-city-tablet@1x.jpg 1x, img/photo-city-tablet@2x.jpg 2x">
+			<img class="feature__img" src="img/photo-city-mobile@1x.jpg" srcset="img/photo-city-mobile@1x.jpg 1x, img/photo-city-mobile@2x.jpg 2x" alt="Седона - небольшой городок в Аризоне">
+		  </picture>
+	  </div>
+       <div class="feature__text-block feature__text-block--blue-background">
+        <span class="feature__feature-number">– №2 –</span>
         <h3 class="feature__head">Там есть Мост дьявола</h3>
         <p class="feature__subtitle feature__subtitle--white"> Да, по нему можно пройти! Если конечно вы осмелитесь!</p>
         </div>
       </div>
       <div class="feature feature--grey">
-        <span class="ffeature__feature-number">№ 3</span>
+        <span class="ffeature__feature-number">– №3 –</span>
         <h3 class="feature__head">Небольшая площадь </h3>
         <p class="feature__subtitle">Все достопримечательности находятся очень близко</p>
       </div>
       <div class="feature feature--grey">
-        <span class="feature__feature-number">№ 4</span>
+        <span class="feature__feature-number">– №4 –</span>
         <h3 class="feature__head">Красивая дорога</h3>
         <p class="feature__subtitle">Езхать в Седону из Лас-Вегаса совсем не скучно</p>
       </div>
       <div class="feature feature--grey">
-        <span class="feature__feature-number">№ 5</span>
+        <span class="feature__feature-number">– №5 –</span>
         <h3 class="feature__head">Мало туристов</h3>
         <p class="feature__subtitle">Большинство едет в Гранд Каньон и толпится там</p>
       </div>

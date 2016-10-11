@@ -1,22 +1,42 @@
 .header {
 }
 .header__main-photo {
-  height: 160px;
-  background: url(../img/bg-back-mobile@1x.jpg) no-repeat;
+  height: 330px;
+  background:url(../img/bg-back-mobile@1x.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background-position: center;
+  text-align: center;
 }
-.header__main-head {
-  font-family: PT Sans, sans-serif;
-  font-weight: bold;
-  font-size: 60px;
-  color: #fff;
+.header__main-photo-logo {
+  width: 280px;
+  margin-top: 12%;
 }
 @media @tablet-widths {
   .header__main-photo {
-  height: 290px;
+  height: 530px;
+  background: url(../img/bg-back-tablet@1x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  }
+      @media @retina {
+      background-image: url("img/bg-back-tablet@2x.jpg");
+    }
+  .header__main-photo-logo {
+  width: 350px;
   }
 }
+@media @desktop-widths {
+  .header__main-photo {
+  background: url(../img/bg-back-desktop@1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  }
+      @media @retina {
+      background-image: url("img/bg-back-desktop@2x.jpg");
+    }
+}
+

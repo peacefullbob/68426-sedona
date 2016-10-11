@@ -15,17 +15,23 @@
    <div class="main-nav__wrapper">
       <button class="main-nav__toggle" type="button"></button>
       <button class="main-nav__toggle-close" type="button"></button>
-      <a class="logo" href="/"><img src="img/logo-sedona-mobile.svg"></a>
+      <a class="logo" href="/">
+       <picture>
+        <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+        <img src="img/logo-sedona-mobile.svg" alt="Седона - небольшой городок в Аризоне">
+      </picture>
+      </a>
       <nav class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__list-item"><a class="main-nav__link-item" href=index.html>Главная</a></li>
           <li class="main-nav__list-item"><a class="main-nav__link-item" href="photo.html">Фото и видео</a></li>
-          <li class="main-nav__list-item"><a class="main-nav__link-item" href="form.html">Форма отзыва</a></li>
+          <li class="main-nav__list-item"><a class="main-nav__link-item main-nav__link-item--active" href="form.html">Форма отзыва</a></li>
           <li class="main-nav__list-item"><a class="main-nav__link-item" href="https://htmlacademy.ru">HTML Academy</a></li>
         </ul>
       </nav>
     </div>
-    <div class="header__main-photo"><h1 class="header__main-head">Sedona</h1></div>
+    <div class="header__main-photo"><img class="header__main-photo-logo" src="img/text-sedona.svg"></div>
   </header>
   <div class="text-block">
     <h3 class="text-block__main-head">Оставьте свой отзыв</h3>
@@ -34,22 +40,22 @@
   <div class="mainpage-content">
     <form class="form" method="post">
       <div class="form-information">
-        <h3 class="text-block__main-head">Представьтесь, пожалуйста:</h3>
-        <label class="form-information__label-text" for="name1">Имя</label><input class="form-information__input-text" type="text" id="name1">
+        <h3 class="form-information__main-head">Представьтесь, пожалуйста:</h3>
+        <label class="form-information__label-text" for="name1" placeholder="">Имя</label><input class="form-information__input-text" type="text" id="name1" placeholder="Акакий">
 
-        <label class="form-information__label-text" for="name2">Фамилия</label><input class="form-information__input-text" type="text" id="name2">
+        <label class="form-information__label-text" for="name2">Фамилия</label><input class="form-information__input-text" type="text" id="name2" placeholder="Акакиевич">
 
-        <label class="form-information__label-text" for="name3">Отчество</label><input class="form-information__input-text" type="text" id="name3">
-      </div>
-      <div class="clearfix"></div>
-      <div class="form-information">
-        <h3 class="text-block__main-head">Контактная информация:</h3>
-        <label class="form-information__label-text" for="phone">Контактный телефон</label><input class="form-information__input-text" type="text" id="phone" placeholder="Введите ваш телефон">
-        <label class="form-information__label-text" for="mail">Электронная почта</label>
-        <input class="form-information__input-text" type="text" id="mail" placeholder="Введите вашу почту">
+        <label class="form-information__label-text" for="name3">Отчество</label><input class="form-information__input-text" type="text" id="name3" placeholder="Мокий">
       </div>
       <div class="form-information">
-        <h3 class="text-block__main-head">Ваше общее впечатление:</h3>
+        <h3 class="form-information__main-head form-information__main-head--form-title">Контактная информация:</h3>
+        <label class="form-information__label-text form-information__label-text--full-width" for="phone">Контактный телефон</label><input class="form-information__input-text form-information__input-text--full-width form-information__input-text--phone-icon" type="text" id="phone" placeholder="Введите ваш телефон">
+        <span class="form-information__error-text">Ошибка, перепроверьте номер</span>
+        <label class="form-information__label-text form-information__label-text--full-width" for="mail">Электронная почта</label>
+        <input class="form-information__input-text form-information__input-text--full-width form-information__input-text--mail-icon" type="text" id="mail" placeholder="Введите вашу почту">
+      </div>
+      <div class="form-information">
+        <h3 class="form-information__main-head form-informatin__main-head--form-title">Ваше общее впечатление:</h3>
         <input class="form-information__radio" type="radio" value="1" id="comment-item1" name="comment">
         <label class="form-information__label-radio"for="comment-item1">Скорее положительное</label>
         <input class="form-information__radio" type="radio" value="2" id="comment-item2" name="comment">
@@ -58,7 +64,7 @@
         <label class="form-information__label-radio"for="comment-item2">Скорее положительное</label>
       </div>
       <div class="form-information">
-        <h3 class="text-block__main-head">Посещенные  достопримечательности:</h3>
+        <div class="form-information__form-title"><h3 class="form-information__main-head">Посещенные  достопримечательности:</h3></div>
         <input class="form-information__checkbox" type="checkbox" value="1" id="attraction-item1" name="attraction1">
         <label class="form-information__label-checkbox" for="attraction-item1">Мост Дьявола</label>
         <input class="form-information__checkbox" type="checkbox" value="2" id="attraction-item2" name="attraction2">
@@ -69,8 +75,8 @@
         <label class="form-information__label-checkbox" for="attraction-item4">Красные скалы</label>
       </div>
       <div class="form-information">
-        <h3 class="text-block__main-head">Опишите свои эмоции:</h3>
-        <textarea class="text-block__textarea"></textarea>
+        <h3 class="form-information__main-head form-information__main-head--form-title">Опишите свои эмоции:</h3>
+        <textarea class="text-block__textarea" placeholder="Опишите свои самые яркие эмоции"></textarea>
       </div>
       <button type="submit" class="btn btn--send-form">Отправить отзыв</button>
 		<p class="form-information__comment-text">* - обязательные поля</p>

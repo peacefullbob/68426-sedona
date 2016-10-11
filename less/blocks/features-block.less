@@ -1,4 +1,11 @@
 .features-block {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+@media @tablet-widths {
+  .features-block {
+  flex-direction: row;
+	}
 }
