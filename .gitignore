@@ -7,6 +7,7 @@
 *.sublime*
 css/*.css
 node_modules/
+build/
 Thumbs.db
 bash.exe.stackdump
 *.log.*
