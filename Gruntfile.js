@@ -1,6 +1,6 @@
 "use strict";
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
   require("load-grunt-tasks")(grunt);
 
@@ -8,7 +8,7 @@ module.exports = function(grunt) {
     less: {
       style: {
         files: {
-          "css/style.css": ["less/style.less"]
+          "build/css/style.css": ["less/style.less"]
         }
       }
     },
@@ -17,43 +17,49 @@ module.exports = function(grunt) {
       style: {
         options: {
           report: "gzip"
-     },
-     files: {
-       "css/style.min.css": ["css/style.css"]
-     }
-    }
-   },
-
-  imagemin: {
-    images: {
-      options: {
-        optimizationLevel: 3
+        },
+        files: {
+          "build/css/style.min.css": ["build/css/style.css"]
+        }
+      }
     },
-    files: [{
-      expand: true,
-        src: ["img/**/*.{png,jpg,gif}"]
+
+    imagemin: {
+      images: {
+        options: {
+          optimizationLevel: 3
+        },
+        files: [{
+          expand: true,
+          src: ["build/img/**/*.{png,jpg,gif}"]
       }]
-     }
-   },
+      }
+    },
 
     postcss: {
       style: {
         options: {
           processors: [
-            require("autoprefixer")({browsers: [
+            require("autoprefixer")({
+              browsers: [
               "last 1 version",
               "last 2 Chrome versions",
               "last 2 Firefox versions",
               "last 2 Opera versions",
               "last 2 Edge versions"
-            ]}),
+            ]
+            }),
             require("css-mqpacker")({
               sort: true
             })
           ]
         },
-        src: "css/*.css"
+        src: "build/css/*.css"
       }
+    },
+
+    clean: {
+      build: ["build"]
     },
 
     svgstore: {
@@ -61,60 +67,68 @@ module.exports = function(grunt) {
         svg: {
           style: "display: none"
         }
-    },
-    symbols: {
-      files: {
-        "img/symbols.svg": ["img/icons/*.svg"]
+      },
+      symbols: {
+        files: {
+          "build/img/symbols.svg": ["img/icons/*.svg"]
+        }
       }
-     }
     },
 
     svgmin: {
-     symbols: {
-      files: [{
-        expand: true,
-         src: ["img/icons/*.svg"]
+      symbols: {
+        files: [{
+          expand: true,
+          src: ["build/img/icons/*.svg"]
       }]
-    }
-  },
+      }
+    },
 
     browserSync: {
       server: {
         bsFiles: {
           src: [
-            "*.html",
-            "css/*.css"
+            "build/*.html",
+            "build/css/*.css"
           ]
         },
         options: {
-          server: ".",
+          server: "build",
           watchTask: true,
-          notify: false,
-          open: true,
-          ui: false
         }
       }
     },
 
     copy: {
       build: {
-       files: [{
-        expand: true,
-        src: [
+        files: [{
+          expand: true,
+          src: [
         "fonts/**/*.{woff,woff2}",
         "img/**",
         "js/**",
         "*.html"
        ],
-       dest: "build"
+          dest: "build"
      }]
-    }
-  },
+      },
+      html: {
+        files: [{
+          expand: true,
+          src: ["*.html"],
+          dest: "build"
+      }]
+      }
+    },
 
     watch: {
+      html: {
+        files: ["*.html"],
+        tasks: ["copy:html"]
+      },
       style: {
         files: ["less/**/*.less"],
-        tasks: ["less", "postcss"],
+        tasks: ["less", "postcss", "csso"],
         options: {
           spawn: false
         }
@@ -124,8 +138,9 @@ module.exports = function(grunt) {
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
   grunt.registerTask("symbols", ["svgmin", "svgstore"]);
-
-  grunt.registerTask ("build"), [
+  grunt.registerTask("build", [
+    "clean",
+    "copy",
     "less",
     "postcss",
     "csso",
